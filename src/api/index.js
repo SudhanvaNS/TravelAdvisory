@@ -24,12 +24,12 @@ export const getPlacesData =async (type,sw,ne) => {
     }
 }
 
-export const getWeatherData = async (lat,lng) => {
-  try{
-    const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=48acc405f87a23cbba6f6d4d8913d210`);
-    return data;
-  }
-  catch(error){
-    console.log(error);
-  }
-}
+// export const getWeatherData = async (lat,lng) => {
+//   try{
+//     const {data}= await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=48acc405f87a23cbba6f6d4d8913d210`);
+//     return data;
+//   }
+//   catch(error){
+//     console.log(error);
+//   }
+// }

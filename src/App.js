@@ -3,7 +3,7 @@ import { CssBaseline, Grid } from "@material-ui/core";
 import Header from './component/Header/Header.jsx';
 import List from './component/List/List.jsx';
 import Map from './component/Map/Map.jsx';
-import { getPlacesData ,getWeatherData} from './api';
+import { getPlacesData } from './api';
 
 
 const App = () =>{
@@ -24,10 +24,10 @@ const App = () =>{
     },[]);
     useEffect( () => {
         setIsLoading(true);
-        getWeatherData(coordinates.lat,coordinates.lng)
-        .then((data) => {
-            setWeatherData(data);
-        })
+        // getWeatherData(coordinates.lat,coordinates.lng)
+        // .then((data) => {
+            // setWeatherData(data);
+        // })
         getPlacesData(type,bounds.sw,bounds.ne)
         .then((data) => {
            
@@ -62,7 +62,7 @@ const App = () =>{
                     coordinates={coordinates}
                     places={filteredPLaces.length ? filteredPLaces : places}
                     setChildClicked={setChildClicked}
-                    weatherData={weatherData}
+                    // weatherData={weatherData}
                     />    
             </Grid>
         </Grid>
